@@ -33,12 +33,40 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
         : .zero
     }
 
+    /**
+     All calls from `UINavigationControllerDelegate` methods are forwarded to this object
+     */
+    public weak var navigationControllerDelegate: UINavigationControllerDelegate? {
+        didSet {
+            // Make the navigationController reevaluate respondsToSelector
+            // for UINavigationControllerDelegate methods
+            navigationController?.delegate = nil
+            navigationController?.delegate = self
+        }
+    }
+
     override public func viewDidLoad() {
         super.viewDidLoad()
         setup()
     }
 
-    // MARK: -
+    //MARK: - NSObject
+
+    override public func responds(to aSelector: Selector!) -> Bool {
+        if shouldForwardSelector(aSelector) {
+            return navigationControllerDelegate?.responds(to: aSelector) ?? false
+        }
+        return super.responds(to: aSelector)
+    }
+
+    override public func forwardingTarget(for aSelector: Selector!) -> Any? {
+        if shouldForwardSelector(aSelector) {
+            return navigationControllerDelegate
+        }
+        return super.forwardingTarget(for: aSelector)
+    }
+
+    // MARK: - ExtensibleNavigationBarNavigationController
 
     public func setNavigationBarExtensionView(_ view: UIView, forHeight height: CGFloat) {
         navBarExtensionView?.removeFromSuperview()
@@ -99,6 +127,13 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
             .constraint(equalTo: view.bottomAnchor, constant: -navigationBarAdditionalSize)
         toolbarBottomConstraint?.isActive = true
         return view
+    }
+
+    private func shouldForwardSelector(_ aSelector: Selector!) -> Bool {
+        let description = protocol_getMethodDescription(UINavigationControllerDelegate.self, aSelector, false, true)
+        return
+            description.name != nil // belongs to UINavigationControllerDelegate
+                && class_getInstanceMethod(type(of: self), aSelector) == nil // self does not implement aSelector
     }
 }
 
