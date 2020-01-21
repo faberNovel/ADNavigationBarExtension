@@ -6,6 +6,7 @@
 //  Copyright (c) 2020 Samuel Gallet. All rights reserved.
 //
 
+import NavigationBarExtension
 import UIKit
 
 @UIApplicationMain
@@ -15,7 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        self.window = window
+        window.backgroundColor = UIColor.white
+        let navigationController = ExtensibleNavigationBarNavigationController()
+        window.rootViewController = navigationController
+        navigationController.navigationBar.prefersLargeTitles = true
+        navigationController.setNavigationBarExtensionView(UIView(), forHeight: 64)
+        let vc = SwitchExtensionTableViewController(navBarExtended: false)
+        navigationController.pushViewController(vc, animated: false)
+        window.makeKeyAndVisible()
         return true
     }
 

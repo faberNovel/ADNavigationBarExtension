@@ -8,6 +8,7 @@ PODS:
     - ADUtils (~> 10.1)
 
 DEPENDENCIES:
+  - ADUtils (~> 10.1)
   - NavigationBarExtension (from `../`)
 
 SPEC REPOS:
@@ -22,6 +23,6 @@ SPEC CHECKSUMS:
   ADUtils: a88c87c869e8166f3ebdb9523b6940936f7c819a
   NavigationBarExtension: ceadbf5d91d35716e8c88d59ce80147cea6d21b7
 
-PODFILE CHECKSUM: 6436acc634d863d840642fc527d523f3c628ac24
+PODFILE CHECKSUM: 76fa79133a6caee44689993add55c9519b8ea163
 
 COCOAPODS: 1.8.3
