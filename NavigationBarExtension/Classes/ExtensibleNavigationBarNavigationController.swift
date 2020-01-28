@@ -111,7 +111,7 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
             .constraint(equalTo: navigationBar.bottomAnchor, constant: navigationBarAdditionalSize)
         navBarExtensionContainerBottomConstraint?.isActive = true
         navBarExtensionContainerView.ad_pinToSuperview(edges: [.left, .right])
-        view.bringSubview(toFront: navigationBar)
+        view.bringSubviewToFront(navigationBar)
     }
 
     private func initNavbarExtensionContainerView() -> UIView {
