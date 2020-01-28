@@ -6,7 +6,7 @@
 //  Copyright (c) 2020 Samuel Gallet. All rights reserved.
 //
 
-import NavigationBarExtension
+import ADNavigationBarExtension
 import UIKit
 
 @UIApplicationMain

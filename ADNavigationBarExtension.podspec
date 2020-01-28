@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'NavigationBarExtension'
+  s.name             = 'ADNavigationBarExtension'
   s.version          = '0.1.0'
   s.summary          = 'A short description of NavigationBarExtension.'
 

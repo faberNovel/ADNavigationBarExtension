@@ -7,7 +7,7 @@
 //
 
 import ADUtils
-import NavigationBarExtension
+import ADNavigationBarExtension
 import UIKit
 
 class SwitchExtensionTableViewController: UIViewController {

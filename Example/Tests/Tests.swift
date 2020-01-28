@@ -1,5 +1,5 @@
 import XCTest
-import NavigationBarExtension
+import ADNavigationBarExtension
 
 class Tests: XCTestCase {
     

@@ -290,13 +290,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-NavigationBarExtension_Example/Pods-NavigationBarExtension_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ADNavigationBarExtension/ADNavigationBarExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/ADUtils/ADUtils.framework",
-				"${BUILT_PRODUCTS_DIR}/NavigationBarExtension/NavigationBarExtension.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ADNavigationBarExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ADUtils.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NavigationBarExtension.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
