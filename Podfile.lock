@@ -8,7 +8,7 @@ PODS:
   - ADUtils/Swift (10.1.0)
 
 DEPENDENCIES:
-  - ADNavigationBarExtension (from `../`)
+  - ADNavigationBarExtension (from `./`)
   - ADUtils (~> 10.1)
 
 SPEC REPOS:
@@ -17,12 +17,12 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   ADNavigationBarExtension:
-    :path: "../"
+    :path: "./"
 
 SPEC CHECKSUMS:
   ADNavigationBarExtension: 2a6c86fb369a42b7a617530d90745a26144dca68
   ADUtils: a88c87c869e8166f3ebdb9523b6940936f7c819a
 
-PODFILE CHECKSUM: d7879b8fc3e8be267bd760983f14d6a3d8a048de
+PODFILE CHECKSUM: cc2e9d6a40546a4838a4c5ee8fe51c0612d74bf7
 
 COCOAPODS: 1.8.3
