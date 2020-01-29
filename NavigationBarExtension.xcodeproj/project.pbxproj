@@ -10,6 +10,7 @@
 		0C39B59723E1E845004B0288 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 0C39B59423E1E845004B0288 /* LICENSE */; };
 		0C39B59823E1E845004B0288 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C39B59523E1E845004B0288 /* README.md */; };
 		0C39B59923E1E845004B0288 /* ADNavigationBarExtension.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 0C39B59623E1E845004B0288 /* ADNavigationBarExtension.podspec */; };
+		0C39B59B23E1F65F004B0288 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C39B59A23E1F65F004B0288 /* CHANGELOG.md */; };
 		0C9C511723E16BEA001A15F5 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9C511623E16BEA001A15F5 /* StepView.swift */; };
 		0C9C511923E16C10001A15F5 /* NavBarExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9C511823E16C10001A15F5 /* NavBarExtensionView.swift */; };
 		0C9C511B23E16C37001A15F5 /* Step1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9C511A23E16C37001A15F5 /* Step1ViewController.swift */; };
@@ -40,6 +41,7 @@
 		0C39B59423E1E845004B0288 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		0C39B59523E1E845004B0288 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0C39B59623E1E845004B0288 /* ADNavigationBarExtension.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ADNavigationBarExtension.podspec; sourceTree = "<group>"; };
+		0C39B59A23E1F65F004B0288 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		0C9C511623E16BEA001A15F5 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
 		0C9C511823E16C10001A15F5 /* NavBarExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarExtensionView.swift; sourceTree = "<group>"; };
 		0C9C511A23E16C37001A15F5 /* Step1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step1ViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				0C39B59623E1E845004B0288 /* ADNavigationBarExtension.podspec */,
 				0C39B59423E1E845004B0288 /* LICENSE */,
 				0C39B59523E1E845004B0288 /* README.md */,
+				0C39B59A23E1F65F004B0288 /* CHANGELOG.md */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C39B59723E1E845004B0288 /* LICENSE in Resources */,
+				0C39B59B23E1F65F004B0288 /* CHANGELOG.md in Resources */,
 				0C39B59923E1E845004B0288 /* ADNavigationBarExtension.podspec in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				0C39B59823E1E845004B0288 /* README.md in Resources */,
