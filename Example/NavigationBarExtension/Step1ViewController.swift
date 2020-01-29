@@ -19,6 +19,7 @@ class Step1ViewController: UIViewController, UITableViewDataSource {
         tableView.ad_pinToSuperview()
         tableView.register(cell: .class(UITableViewCell.self))
         tableView.dataSource = self
+        tableView.backgroundColor = .orange
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             title: "Next",
             style: .done,
