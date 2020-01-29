@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C39B59723E1E845004B0288 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 0C39B59423E1E845004B0288 /* LICENSE */; };
+		0C39B59823E1E845004B0288 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C39B59523E1E845004B0288 /* README.md */; };
+		0C39B59923E1E845004B0288 /* ADNavigationBarExtension.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 0C39B59623E1E845004B0288 /* ADNavigationBarExtension.podspec */; };
+		0C39B59B23E1F65F004B0288 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C39B59A23E1F65F004B0288 /* CHANGELOG.md */; };
 		0C9C511723E16BEA001A15F5 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9C511623E16BEA001A15F5 /* StepView.swift */; };
 		0C9C511923E16C10001A15F5 /* NavBarExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9C511823E16C10001A15F5 /* NavBarExtensionView.swift */; };
 		0C9C511B23E16C37001A15F5 /* Step1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9C511A23E16C37001A15F5 /* Step1ViewController.swift */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C39B59423E1E845004B0288 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		0C39B59523E1E845004B0288 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0C39B59623E1E845004B0288 /* ADNavigationBarExtension.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ADNavigationBarExtension.podspec; sourceTree = "<group>"; };
+		0C39B59A23E1F65F004B0288 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		0C9C511623E16BEA001A15F5 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
 		0C9C511823E16C10001A15F5 /* NavBarExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarExtensionView.swift; sourceTree = "<group>"; };
 		0C9C511A23E16C37001A15F5 /* Step1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step1ViewController.swift; sourceTree = "<group>"; };
@@ -41,10 +49,8 @@
 		0C9C511E23E16C88001A15F5 /* CountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
 		0C9C512023E16CBA001A15F5 /* Stepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stepper.swift; sourceTree = "<group>"; };
 		0CD9858D23D732B90035506B /* SwitchExtensionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchExtensionTableViewController.swift; sourceTree = "<group>"; };
-		0F5CF864830ECBD887B9AFBC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		1704CE6DFCD14103D3FC26E3 /* Pods_NavigationBarExtension_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NavigationBarExtension_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACAA2D62471085F890DCC0C /* Pods_NavigationBarExtension_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NavigationBarExtension_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BF62B74511DE8B2D671BA2F /* NavigationBarExtension.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NavigationBarExtension.podspec; path = ../NavigationBarExtension.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5CBBB409DAF9FDCED08BD32C /* Pods-NavigationBarExtension_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationBarExtension_Example.release.xcconfig"; path = "Target Support Files/Pods-NavigationBarExtension_Example/Pods-NavigationBarExtension_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* NavigationBarExtension_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationBarExtension_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,7 +63,6 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6D8DEEA223640CAF51DA72BA /* Pods-NavigationBarExtension_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationBarExtension_Tests.debug.xcconfig"; path = "Target Support Files/Pods-NavigationBarExtension_Tests/Pods-NavigationBarExtension_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		98C3DBD0C912239FE5FDF8E9 /* Pods-NavigationBarExtension_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationBarExtension_Example.debug.xcconfig"; path = "Target Support Files/Pods-NavigationBarExtension_Example/Pods-NavigationBarExtension_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D5684E0C5BF7D2763CD00C48 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F9409A370C2B3E04C5762472 /* Pods-NavigationBarExtension_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationBarExtension_Tests.release.xcconfig"; path = "Target Support Files/Pods-NavigationBarExtension_Tests/Pods-NavigationBarExtension_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,9 +156,10 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				3BF62B74511DE8B2D671BA2F /* NavigationBarExtension.podspec */,
-				0F5CF864830ECBD887B9AFBC /* README.md */,
-				D5684E0C5BF7D2763CD00C48 /* LICENSE */,
+				0C39B59623E1E845004B0288 /* ADNavigationBarExtension.podspec */,
+				0C39B59423E1E845004B0288 /* LICENSE */,
+				0C39B59523E1E845004B0288 /* README.md */,
+				0C39B59A23E1F65F004B0288 /* CHANGELOG.md */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -265,7 +271,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C39B59723E1E845004B0288 /* LICENSE in Resources */,
+				0C39B59B23E1F65F004B0288 /* CHANGELOG.md in Resources */,
+				0C39B59923E1E845004B0288 /* ADNavigationBarExtension.podspec in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				0C39B59823E1E845004B0288 /* README.md in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,12 +507,15 @@
 			baseConfigurationReference = 98C3DBD0C912239FE5FDF8E9 /* Pods-NavigationBarExtension_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = "$(SRCROOT)/Example/NavigationBarExtension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.1.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.applidium.NavigationBarExtension-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "$(PROFILE_UUID_0)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
@@ -513,12 +526,15 @@
 			baseConfigurationReference = 5CBBB409DAF9FDCED08BD32C /* Pods-NavigationBarExtension_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = "$(SRCROOT)/Example/NavigationBarExtension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.1.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.applidium.NavigationBarExtension-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "$(PROFILE_UUID_0)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
