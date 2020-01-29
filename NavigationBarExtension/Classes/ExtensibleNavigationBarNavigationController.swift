@@ -16,7 +16,7 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
 
     private var navigationBarAdditionalSize: CGFloat = 0 {
         didSet {
-            let needsToShowExtension = (topViewController as? ExtensibleNavigationBarInformationProvider)?.shouldExtendNavigationBar ?? false
+            let needsToShowExtension = self.needsToShowExtension(for: topViewController)
             navBarExtensionBottomConstraint?.constant = !needsToShowExtension ? -navigationBarAdditionalSize : 0
             navBarExtensionTopConstraint?.constant = -navigationBarAdditionalSize
             navBarExtensionContainerBottomConstraint?.constant = navigationBarAdditionalSize
@@ -27,7 +27,7 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
     private var navBarExtensionView: UIView?
 
     private var extensionAdditionalSafeAreaInsets: UIEdgeInsets {
-        let needsToShowExtension = (topViewController as? ExtensibleNavigationBarInformationProvider)?.shouldExtendNavigationBar ?? false
+        let needsToShowExtension = self.needsToShowExtension(for: topViewController)
         return needsToShowExtension ?
         UIEdgeInsets(top: navigationBarAdditionalSize)
         : .zero
@@ -40,8 +40,8 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
         didSet {
             // Make the navigationController reevaluate respondsToSelector
             // for UINavigationControllerDelegate methods
-            navigationController?.delegate = nil
-            navigationController?.delegate = self
+            delegate = nil
+            delegate = self
         }
     }
 
@@ -68,8 +68,13 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
 
     // MARK: - ExtensibleNavigationBarNavigationController
 
-    public func setNavigationBarExtensionView(_ view: UIView, forHeight height: CGFloat) {
+    public func setNavigationBarExtensionView(_ view: UIView?, forHeight height: CGFloat = 0) {
         navBarExtensionView?.removeFromSuperview()
+        guard let view = view else {
+            self.navBarExtensionView = nil
+            navigationBarAdditionalSize = height
+            return
+        }
         let container = UIView()
         container.translatesAutoresizingMaskIntoConstraints = false
         let toolBar = UIToolbar()
@@ -79,6 +84,7 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
         toolBar.ad_pinToSuperview()
         container.addSubview(view)
         view.ad_pinToSuperview()
+        container.clipsToBounds = true
         self.navBarExtensionView = container
         navBarExtensionContainerView.addSubview(container)
         container.ad_pinToSuperview(edges: [.left, .right])
@@ -135,6 +141,11 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
             description.name != nil // belongs to UINavigationControllerDelegate
                 && class_getInstanceMethod(type(of: self), aSelector) == nil // self does not implement aSelector
     }
+
+    private func needsToShowExtension(for viewController: UIViewController?) -> Bool {
+        return navBarExtensionView != nil
+        && ((viewController as? ExtensibleNavigationBarInformationProvider)?.shouldExtendNavigationBar ?? false)
+    }
 }
 
 extension ExtensibleNavigationBarNavigationController: UINavigationControllerDelegate {
@@ -144,7 +155,13 @@ extension ExtensibleNavigationBarNavigationController: UINavigationControllerDel
     public func navigationController(_ navigationController: UINavigationController,
                               willShow viewController: UIViewController,
                               animated: Bool) {
-        let needsToShowExtension = (viewController as? ExtensibleNavigationBarInformationProvider)?.shouldExtendNavigationBar ?? false
+        navigationControllerDelegate?.navigationController?(
+            navigationController,
+            willShow: viewController,
+            animated: animated
+        )
+
+        let needsToShowExtension = self.needsToShowExtension(for: viewController)
         let previousHeightConstraintConstant = navBarExtensionBottomConstraint?.constant ?? 0
         navBarExtensionBottomConstraint?.constant = !needsToShowExtension ? -navigationBarAdditionalSize : 0
         if animated {
