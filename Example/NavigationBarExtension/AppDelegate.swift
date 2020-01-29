@@ -13,17 +13,19 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    private var stepper: Stepper?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
         window.backgroundColor = UIColor.white
-        let navigationController = ExtensibleNavigationBarNavigationController()
+        let stepper = Stepper()
+        self.stepper = stepper
+        let navigationController = stepper.navigationController
         window.rootViewController = navigationController
         navigationController.navigationBar.prefersLargeTitles = true
-        navigationController.setNavigationBarExtensionView(UIView(), forHeight: 64)
-        let vc = SwitchExtensionTableViewController(navBarExtended: false)
+        let vc = Step1ViewController()
         navigationController.pushViewController(vc, animated: false)
         window.makeKeyAndVisible()
         return true
