@@ -21,7 +21,9 @@ See the provided examples for help or feel free to ask directly.
 
 ---
 
-Example: TODO
+<p align="center">
+<img src="https://github.com/applidium/ADNavigationBarExtension/blob/master/Assets/example.gif" width="222">
+</p>
 
 ---
 
