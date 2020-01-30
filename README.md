@@ -61,7 +61,7 @@ A startup sequence might look like this:
 let navigationController = ExtensibleNavigationBarNavigationController()
 let navigationBarExtension = MyCustomView()
 let navigationBarExtensionHeight = 64
-navigationController.setNavigationBarExtensionView(stepView, forHeight: stepHeight)
+navigationController.setNavigationBarExtensionView(navigationBarExtension, forHeight: navigationBarExtensionHeight)
 navigationController.pushViewController(MyViewController(), animated: false)
 window.rootViewController = navigationController
 ```
