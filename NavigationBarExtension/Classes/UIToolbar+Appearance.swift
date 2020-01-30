@@ -22,10 +22,12 @@ extension UIToolbar {
                 .appearance(whenContainedInInstancesOf: [ExtensibleNavigationBarNavigationController.self])
                 .compactAppearance
             compactAppearance = compactNavigationBarAppearance.map { UIToolbarAppearance(barAppearance: $0) }
-            let standardNavigationBarAppearance = UINavigationBar
+            let standardNavigationBarAppearance: UINavigationBarAppearance? = UINavigationBar
                 .appearance(whenContainedInInstancesOf: [ExtensibleNavigationBarNavigationController.self])
                 .standardAppearance
-            standardAppearance = UIToolbarAppearance(barAppearance: standardNavigationBarAppearance)
+            if let appearance = standardNavigationBarAppearance {
+                standardAppearance = UIToolbarAppearance(barAppearance: appearance)
+            }
         } else {
             backgroundColor = UINavigationBar
                 .appearance(whenContainedInInstancesOf: [ExtensibleNavigationBarNavigationController.self])

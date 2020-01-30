@@ -96,9 +96,9 @@ ExtensibleNavigationBarNavigationController.ad_isTranslucent = true
 
 ## Credits
 
-ADNavigationBarExtension is owned and maintained by [Fabernovel Technologies](https://technologies.fabernovel.com/). You can follow us on Twitter at [@applidium](https://twitter.com/applidium).
+ADNavigationBarExtension is owned and maintained by [Fabernovel](https://fabernovel.com/). You can follow us on Twitter at [@FabernovelApp](https://twitter.com/fabernovelapp).
 
 
 ## License
 
-ADUtils is released under the MIT license. [See LICENSE](LICENSE) for details.
+ADNavigationBarExtension is released under the MIT license. [See LICENSE](LICENSE) for details.
