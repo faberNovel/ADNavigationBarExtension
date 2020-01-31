@@ -164,15 +164,27 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
             let standardNavigationBarAppearance = UINavigationBar
                 .appearance(whenContainedInInstancesOf: [ExtensibleNavigationBarNavigationController.self])
                 .standardAppearance
-            navigationBar.standardAppearance.shadowColor = needsToShowExtension
+            var color = needsToShowExtension
                 ? nil
                 : standardNavigationBarAppearance.shadowColor
-            navigationBar.compactAppearance?.shadowColor = needsToShowExtension
-                ? nil
-                : compactNavigationBarAppearance?.shadowColor
-            navigationBar.scrollEdgeAppearance?.shadowColor = needsToShowExtension
+            navigationBar.standardAppearance = UINavigationBarAppearance(
+                barAppearance: standardNavigationBarAppearance
+            )
+            navigationBar.standardAppearance.shadowColor = color
+            color = needsToShowExtension
                 ? nil
                 : scrollEdgeNavigationBarAppearance?.shadowColor
+            navigationBar.scrollEdgeAppearance = scrollEdgeNavigationBarAppearance.map {
+                UINavigationBarAppearance(barAppearance: $0)
+            }
+            navigationBar.scrollEdgeAppearance?.shadowColor = color
+            color = needsToShowExtension
+                ? nil
+                : compactNavigationBarAppearance?.shadowColor
+            navigationBar.compactAppearance = compactNavigationBarAppearance.map {
+                UINavigationBarAppearance(barAppearance: $0)
+            }
+            navigationBar.compactAppearance?.shadowColor = color
         } else {
             navigationBar.shadowImage = needsToShowExtension ? UIImage() : nil
         }
