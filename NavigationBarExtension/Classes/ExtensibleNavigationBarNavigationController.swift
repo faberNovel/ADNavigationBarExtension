@@ -78,6 +78,7 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
         guard let view = view else {
             self.navBarExtensionView = nil
             navigationBarAdditionalSize = height
+            updateShadowImage()
             return
         }
         let container = UIView()
@@ -100,6 +101,7 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
             .constraint(equalTo: navBarExtensionContainerView.bottomAnchor)
         navBarExtensionBottomConstraint?.isActive = true
         navigationBarAdditionalSize = height
+        updateShadowImage()
     }
 
     // MARK: - UINavigationController
