@@ -1,5 +1,5 @@
 PODS:
-  - ADNavigationBarExtension (0.1.2):
+  - ADNavigationBarExtension (0.1.3):
     - ADUtils (~> 10.1)
   - ADUtils (10.1.0):
     - ADUtils/objc (= 10.1.0)
@@ -20,7 +20,7 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  ADNavigationBarExtension: b89fc454382b092be48e43e4669d2b4cab18c133
+  ADNavigationBarExtension: 43869e2458e6d1fb76487d69642fc9a51c2fdab2
   ADUtils: a88c87c869e8166f3ebdb9523b6940936f7c819a
 
 PODFILE CHECKSUM: cc2e9d6a40546a4838a4c5ee8fe51c0612d74bf7

@@ -40,7 +40,7 @@
 /* Begin PBXFileReference section */
 		0C39B59423E1E845004B0288 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		0C39B59523E1E845004B0288 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		0C39B59623E1E845004B0288 /* ADNavigationBarExtension.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ADNavigationBarExtension.podspec; sourceTree = "<group>"; };
+		0C39B59623E1E845004B0288 /* ADNavigationBarExtension.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ADNavigationBarExtension.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		0C39B59A23E1F65F004B0288 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		0C9C511623E16BEA001A15F5 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
 		0C9C511823E16C10001A15F5 /* NavBarExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarExtensionView.swift; sourceTree = "<group>"; };
