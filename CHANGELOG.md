@@ -1,4 +1,10 @@
 
+## [0.1.3]
+
+### Fixed
+- Prevent crash when standardAppearance is not set
+- Update ruby version
+
 ## [0.1.1]
 
 ### Fixed
