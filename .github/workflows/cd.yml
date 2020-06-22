@@ -1,0 +1,25 @@
+name: Publish release
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.6.5
+
+    - name: Bundle install
+      run: bundle install
+    - name: Publish release
+      env:
+        GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+        COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TOKEN_CI }}
+      run: bundle exec fastlane publish_release

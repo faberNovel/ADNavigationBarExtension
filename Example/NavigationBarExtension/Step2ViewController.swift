@@ -54,8 +54,8 @@ class Step2ViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.section.isMultiple(of: 2) {
-            let vc = CountriesViewController()
-            navigationController?.pushViewController(vc, animated: true)
+            let viewController = CountriesViewController()
+            navigationController?.pushViewController(viewController, animated: true)
         }
     }
 
@@ -70,4 +70,3 @@ extension Step2ViewController: StepperNavigationProvider {
         return "Step 2"
     }
 }
-

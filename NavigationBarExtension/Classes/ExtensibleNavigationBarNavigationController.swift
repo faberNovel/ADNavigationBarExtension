@@ -1,4 +1,3 @@
-
 import ADUtils
 import UIKit
 
@@ -11,7 +10,8 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
     // ?!!! (Samuel Gallet) 29/01/2020 isTranslucent property does not work with iOS 12. Use this property
     // to set isTranslucent to the custom navigationBar with iOS 12
     @available(iOS, deprecated: 13.0, message: "Use appearance instead of this property")
-    static public var ad_isTranslucent: Bool = true
+    // swiftlint:disable:next identifier_name
+    public static var ad_isTranslucent: Bool = true
 
     private lazy var navBarExtensionContainerView: UIView = self.initNavbarExtensionContainerView()
     private var navBarExtensionContainerBottomConstraint: NSLayoutConstraint?
@@ -55,7 +55,7 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
         setup()
     }
 
-    //MARK: - NSObject
+    // MARK: - NSObject
 
     override public func responds(to aSelector: Selector!) -> Bool {
         if shouldForwardSelector(aSelector) {
@@ -95,7 +95,7 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
         navBarExtensionContainerView.addSubview(container)
         container.ad_pinToSuperview(edges: [.left, .right])
         navBarExtensionTopConstraint = container.topAnchor
-            .constraint(equalTo: navBarExtensionContainerView.bottomAnchor,constant: -navigationBarAdditionalSize)
+            .constraint(equalTo: navBarExtensionContainerView.bottomAnchor, constant: -navigationBarAdditionalSize)
         navBarExtensionTopConstraint?.isActive = true
         navBarExtensionBottomConstraint = container.bottomAnchor
             .constraint(equalTo: navBarExtensionContainerView.bottomAnchor)
@@ -198,8 +198,8 @@ extension ExtensibleNavigationBarNavigationController: UINavigationControllerDel
     // MARK: - UINavigationControllerDelegate
 
     public func navigationController(_ navigationController: UINavigationController,
-                              willShow viewController: UIViewController,
-                              animated: Bool) {
+                                     willShow viewController: UIViewController,
+                                     animated: Bool) {
         navigationControllerDelegate?.navigationController?(
             navigationController,
             willShow: viewController,

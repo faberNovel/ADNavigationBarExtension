@@ -56,8 +56,8 @@ class Step1ViewController: UIViewController, UITableViewDataSource {
     }
 
     @objc private func nextStep() {
-        let vc = Step2ViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        let viewController = Step2ViewController()
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
@@ -67,4 +67,3 @@ extension Step1ViewController: StepperNavigationProvider {
         return "Step 1"
     }
 }
-
