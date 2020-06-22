@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches-ignore:
+      - master
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.6.5
+    - name: Bundle install
+      run: bundle install
+    - name: Pod install
+      run: bundle exec pod install
+    - name: Build and test
+      run: bundle exec fastlane ci_check
+    - name: Pod lib lint
+      run: pod lib lint

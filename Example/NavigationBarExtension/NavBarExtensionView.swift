@@ -22,8 +22,8 @@ class NavBarExtensionView: UIView {
     }
 
     func selectStep(atIndex index: Int, label: String?) {
-        for i in 0..<steps.count {
-            steps[i].title = i == index ? label : nil
+        for stepIndex in 0..<steps.count {
+            steps[stepIndex].title = stepIndex == index ? label : nil
         }
     }
 

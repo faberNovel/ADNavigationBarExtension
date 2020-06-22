@@ -1,4 +1,11 @@
 
+## [1.0.0]
+
+### Fixed
+- Readme
+- Swiftlint warning
+- Repository migration
+
 ## [0.1.3]
 
 ### Fixed
