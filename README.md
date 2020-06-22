@@ -40,7 +40,7 @@ ADNavigationBarExtension is written in swift 5.0. Compatible with iOS 10.0+
 
 ## Installation
 
-OverlayContainer is available through [CocoaPods](https://cocoapods.org). To install it, simply add the following line to your Podfile:
+ADNavigationBarExtension is available through [CocoaPods](https://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ### Cocoapods
 
