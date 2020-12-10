@@ -12,11 +12,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 2.6.5
-    - name: Bundle install
-      run: bundle install
+    - name: Set ruby version
+      run: RUBY_VERSION=$(~/.rbenv/plugins/rbenv-bundler-ruby-version/bin/rbenv-bundler-ruby-version) && rbenv install -s $RUBY_VERSION
+    - name: Install bundler
+      run: gem install bundler
     - name: Pod install
       run: bundle exec pod install
     - name: Build and test
