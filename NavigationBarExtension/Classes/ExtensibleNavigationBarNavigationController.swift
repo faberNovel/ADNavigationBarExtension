@@ -5,7 +5,7 @@ public protocol ExtensibleNavigationBarInformationProvider {
     var shouldExtendNavigationBar: Bool { get }
 }
 
-public class ExtensibleNavigationBarNavigationController: UINavigationController {
+open public class ExtensibleNavigationBarNavigationController: UINavigationController {
 
     // ?!!! (Samuel Gallet) 29/01/2020 isTranslucent property does not work with iOS 12. Use this property
     // to set isTranslucent to the custom navigationBar with iOS 12
