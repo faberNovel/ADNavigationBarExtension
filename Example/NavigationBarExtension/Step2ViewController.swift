@@ -60,7 +60,8 @@ class Step2ViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
 
     @objc private func nextStep() {
-
+        let viewController = HideNavigationBarViewController()
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 

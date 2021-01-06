@@ -111,6 +111,11 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
         viewController.additionalSafeAreaInsets = extensionAdditionalSafeAreaInsets
     }
 
+    public override func setNavigationBarHidden(_ hidden: Bool, animated: Bool) {
+        super.setNavigationBarHidden(hidden, animated: animated)
+        resetExtensionContainerBottomConstraint()
+    }
+
     // MARK: - Private
 
     private func setup() {
@@ -118,9 +123,7 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         view.addSubview(navBarExtensionContainerView)
         navBarExtensionContainerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        navBarExtensionContainerBottomConstraint = navBarExtensionContainerView.bottomAnchor
-            .constraint(equalTo: navigationBar.bottomAnchor, constant: navigationBarAdditionalSize)
-        navBarExtensionContainerBottomConstraint?.isActive = true
+        resetExtensionContainerBottomConstraint()
         navBarExtensionContainerView.ad_pinToSuperview(edges: [.left, .right])
         view.bringSubviewToFront(navigationBar)
     }
@@ -190,6 +193,13 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
         } else {
             navigationBar.shadowImage = needsToShowExtension ? UIImage() : nil
         }
+    }
+
+    private func resetExtensionContainerBottomConstraint() {
+        NSLayoutConstraint.deactivate(navBarExtensionContainerBottomConstraint.map { [$0] } ?? [])
+        navBarExtensionContainerBottomConstraint = navBarExtensionContainerView.bottomAnchor
+            .constraint(equalTo: navigationBar.bottomAnchor, constant: navigationBarAdditionalSize)
+        navBarExtensionContainerBottomConstraint?.isActive = true
     }
 }
 
