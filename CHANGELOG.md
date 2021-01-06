@@ -1,3 +1,7 @@
+## [1.0.2]
+
+### Fix
+- Fix misplacement of navigation bar extension while hiding navigation bar (issue #5)
 
 ## [1.0.1]
 
