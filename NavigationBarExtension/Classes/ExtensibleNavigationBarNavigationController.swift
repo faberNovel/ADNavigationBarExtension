@@ -13,6 +13,9 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
     // swiftlint:disable:next identifier_name
     public static var ad_isTranslucent: Bool = true
 
+    public private(set) var navigationBarToolbar: UIToolbar?
+    public private(set) var navigationBarExtensionToolbar: UIToolbar?
+
     private lazy var navBarExtensionContainerView: UIView = self.initNavbarExtensionContainerView()
     private var navBarExtensionContainerBottomConstraint: NSLayoutConstraint?
     private var navBarExtensionBottomConstraint: NSLayoutConstraint?
@@ -88,6 +91,7 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
         toolBar.ad_setValuesFromAppearance()
         container.addSubview(toolBar)
         toolBar.ad_pinToSuperview()
+        navigationBarExtensionToolbar = toolbar
         container.addSubview(view)
         view.ad_pinToSuperview()
         container.clipsToBounds = true
@@ -137,6 +141,7 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
         view.addSubview(toolBar)
         toolBar.ad_pinToSuperview(edges: [.left, .right])
         toolBar.ad_pinToSuperview(edges: .top, insets: UIEdgeInsets(value: -40))
+        navigationBarToolbar = toolBar
         toolbarBottomConstraint = toolBar.bottomAnchor
             .constraint(equalTo: view.bottomAnchor, constant: -navigationBarAdditionalSize)
         toolbarBottomConstraint?.isActive = true
