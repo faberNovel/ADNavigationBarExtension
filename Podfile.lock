@@ -1,5 +1,5 @@
 PODS:
-  - ADNavigationBarExtension (1.0.2):
+  - ADNavigationBarExtension (1.0.3):
     - ADUtils (~> 11.0)
   - ADUtils (11.0.0):
     - ADUtils/objc (= 11.0.0)
@@ -23,7 +23,7 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  ADNavigationBarExtension: f7f791cbad7ca548cf007f582e3d12907583f109
+  ADNavigationBarExtension: 973b264907aa9ad10f33854e0230e84921716e73
   ADUtils: 5f5f1ad7a097dcf7104f9c160bc23a30d7943eb8
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 

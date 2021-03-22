@@ -1,3 +1,8 @@
+## [1.0.3]
+
+### Added
+- Set toolbars to fake navigation bar appearance public
+
 ## [1.0.2]
 
 ### Fix
