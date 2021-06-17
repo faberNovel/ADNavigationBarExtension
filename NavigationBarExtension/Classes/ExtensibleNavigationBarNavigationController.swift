@@ -115,9 +115,37 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
         viewController.additionalSafeAreaInsets = extensionAdditionalSafeAreaInsets
     }
 
-    public override func setNavigationBarHidden(_ hidden: Bool, animated: Bool) {
+    override public func setNavigationBarHidden(_ hidden: Bool, animated: Bool) {
         super.setNavigationBarHidden(hidden, animated: animated)
         resetExtensionContainerBottomConstraint()
+    }
+
+    override public var preferredStatusBarStyle: UIStatusBarStyle {
+        if let viewController = topViewController {
+            return viewController.preferredStatusBarStyle
+        }
+        return super.preferredStatusBarStyle
+    }
+
+    override public var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        if let viewController = topViewController {
+            return viewController.preferredInterfaceOrientationForPresentation
+        }
+        return super.preferredInterfaceOrientationForPresentation
+    }
+
+    override public var shouldAutorotate: Bool {
+        if let viewController = topViewController {
+            return viewController.shouldAutorotate
+        }
+        return super.shouldAutorotate
+    }
+
+    override public var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        if let viewController = topViewController {
+            return viewController.supportedInterfaceOrientations
+        }
+        return super.supportedInterfaceOrientations
     }
 
     // MARK: - Private
