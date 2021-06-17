@@ -152,7 +152,6 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
 
     private func setup() {
         delegate = self
-        navigationBar.setBackgroundImage(UIImage(), for: .default)
         view.addSubview(navBarExtensionContainerView)
         navBarExtensionContainerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         resetExtensionContainerBottomConstraint()
