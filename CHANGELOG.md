@@ -1,3 +1,13 @@
+## [1.0.4]
+
+### Fix
+- Observe topViewController's properties for:
+    - `preferredStatusBarStyle`
+    - `preferredInterfaceOrientationForPresentation`
+    - `shouldAutoRotate`
+    - `supportedInterfaceOrientations`
+- Fix navBar background image reset
+
 ## [1.0.3]
 
 ### Added
