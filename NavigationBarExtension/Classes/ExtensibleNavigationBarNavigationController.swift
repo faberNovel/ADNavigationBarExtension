@@ -110,9 +110,17 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
 
     // MARK: - UINavigationController
 
+    override public var viewControllers: [UIViewController] {
+        didSet {
+            for viewController in viewControllers {
+                updateChildViewController(viewController)
+            }
+        }
+    }
+
     override public func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        super.pushViewController(viewController, animated: true)
-        viewController.additionalSafeAreaInsets = extensionAdditionalSafeAreaInsets
+        super.pushViewController(viewController, animated: animated)
+        updateChildViewController(viewController)
     }
 
     override public func setNavigationBarHidden(_ hidden: Bool, animated: Bool) {
@@ -232,6 +240,10 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
         navBarExtensionContainerBottomConstraint = navBarExtensionContainerView.bottomAnchor
             .constraint(equalTo: navigationBar.bottomAnchor, constant: navigationBarAdditionalSize)
         navBarExtensionContainerBottomConstraint?.isActive = true
+    }
+
+    private func updateChildViewController(_ viewController: UIViewController) {
+        viewController.additionalSafeAreaInsets = extensionAdditionalSafeAreaInsets
     }
 }
 
