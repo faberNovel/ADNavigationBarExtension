@@ -21,5 +21,5 @@ Pod::Spec.new do |s|
   s.source_files = 'NavigationBarExtension/Classes/**/*'
 
   s.frameworks = 'UIKit'
-  s.dependency 'ADUtils', '~> 11.0'
+  s.dependency 'ADUtils', '~> 12.0'
 end

@@ -1,3 +1,6 @@
+### Changed
+- Bump ADUtils requirements to 12+
+
 ### Fix
 - Fix safe area when setting the child VCs directly
 
