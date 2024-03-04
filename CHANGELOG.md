@@ -1,3 +1,6 @@
+### Fix
+- Fix safe area when setting the child VCs directly
+
 ## [1.0.4]
 
 ### Fix
