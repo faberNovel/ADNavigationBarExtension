@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.name             = 'ADNavigationBarExtension'
   s.version          = '1.0.4'
   s.author           = 'Fabernovel Technologies'
-  s.homepage         = 'https://technologies.fabernovel.com/'
+  s.homepage         = 'https://fabernovel.com/'
   s.summary          = 'ADNavigationBarExtension is a UI library written in Swift to show and hide an extension to your UINavigationBar'
   s.license          = { :type => 'MIT', :text => 'Created and licensed by Fabernovel Technologies. Copyright 2014-2018 Fabernovel Technologies. All rights reserved.' }
   s.source           = { :git => 'https://github.com/faberNovel/ADNavigationBarExtension.git', :tag => "v#{s.version}" }
