@@ -44,11 +44,7 @@ class Step2ViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section.isMultiple(of: 2) {
-            return "Country"
-        } else {
-            return "Region"
-        }
+        return section.isMultiple(of: 2) ? "Country" : "Region"
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
