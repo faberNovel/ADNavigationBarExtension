@@ -1,17 +1,17 @@
 PODS:
   - ADNavigationBarExtension (1.0.4):
-    - ADUtils (~> 11.0)
-  - ADUtils (11.0.0):
-    - ADUtils/objc (= 11.0.0)
-  - ADUtils/objc (11.0.0):
+    - ADUtils (~> 12.0)
+  - ADUtils (12.1.1):
+    - ADUtils/objc (= 12.1.1)
+  - ADUtils/objc (12.1.1):
     - ADUtils/Swift
-  - ADUtils/Swift (11.0.0)
-  - SwiftLint (0.39.2)
+  - ADUtils/Swift (12.1.1)
+  - SwiftLint (0.53.0)
 
 DEPENDENCIES:
   - ADNavigationBarExtension (from `./`)
-  - ADUtils (~> 11.0)
-  - SwiftLint (~> 0.39.1)
+  - ADUtils (~> 12.0)
+  - SwiftLint (~> 0.53.0)
 
 SPEC REPOS:
   trunk:
@@ -23,10 +23,10 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  ADNavigationBarExtension: 1a9817d4d1f62af51aaa1b27676f1c8dd5e93d7b
-  ADUtils: 5f5f1ad7a097dcf7104f9c160bc23a30d7943eb8
-  SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
+  ADNavigationBarExtension: 7bb3042ea4375225682979774a787ec760a6e22f
+  ADUtils: a3e9fdcfe76222dd3abfa4659ad1e8249ed16c95
+  SwiftLint: 5ce4d6a8ff83f1b5fd5ad5dbf30965d35af65e44
 
-PODFILE CHECKSUM: 680a1e183edb00544c8954221900e5976c9977fe
+PODFILE CHECKSUM: d2c620f3dd81343aaa949a2b35abe6e6ba788184
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.15.2

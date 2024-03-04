@@ -7,12 +7,6 @@ public protocol ExtensibleNavigationBarInformationProvider {
 
 public class ExtensibleNavigationBarNavigationController: UINavigationController {
 
-    // ?!!! (Samuel Gallet) 29/01/2020 isTranslucent property does not work with iOS 12. Use this property
-    // to set isTranslucent to the custom navigationBar with iOS 12
-    @available(iOS, deprecated: 13.0, message: "Use appearance instead of this property")
-    // swiftlint:disable:next identifier_name
-    public static var ad_isTranslucent: Bool = true
-
     public private(set) var navigationBarToolbar: UIToolbar?
     public private(set) var navigationBarExtensionToolbar: UIToolbar?
 
@@ -60,6 +54,7 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
 
     // MARK: - NSObject
 
+    // swiftlint:disable:next implicitly_unwrapped_optional
     override public func responds(to aSelector: Selector!) -> Bool {
         if shouldForwardSelector(aSelector) {
             return navigationControllerDelegate?.responds(to: aSelector) ?? false
@@ -67,6 +62,7 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
         return super.responds(to: aSelector)
     }
 
+    // swiftlint:disable:next implicitly_unwrapped_optional
     override public func forwardingTarget(for aSelector: Selector!) -> Any? {
         if shouldForwardSelector(aSelector) {
             return navigationControllerDelegate
@@ -78,7 +74,7 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
 
     public func setNavigationBarExtensionView(_ view: UIView?, forHeight height: CGFloat = 0) {
         navBarExtensionView?.removeFromSuperview()
-        guard let view = view else {
+        guard let view else {
             self.navBarExtensionView = nil
             navigationBarAdditionalSize = height
             updateShadowImage()
@@ -183,6 +179,7 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
         return view
     }
 
+    // swiftlint:disable:next implicitly_unwrapped_optional
     private func shouldForwardSelector(_ aSelector: Selector!) -> Bool {
         let description = protocol_getMethodDescription(UINavigationControllerDelegate.self, aSelector, false, true)
         return
@@ -197,42 +194,38 @@ public class ExtensibleNavigationBarNavigationController: UINavigationController
 
     private func updateShadowImage() {
         let needsToShowExtension = self.needsToShowExtension(for: topViewController)
-        if #available(iOS 13, *) {
-            let compactNavigationBarAppearance = UINavigationBar
-                .appearance(whenContainedInInstancesOf: [ExtensibleNavigationBarNavigationController.self])
-                .compactAppearance
-            let scrollEdgeNavigationBarAppearance = UINavigationBar
-                .appearance(whenContainedInInstancesOf: [ExtensibleNavigationBarNavigationController.self])
-                .scrollEdgeAppearance
-            let standardNavigationBarAppearance: UINavigationBarAppearance? = UINavigationBar
-                .appearance(whenContainedInInstancesOf: [ExtensibleNavigationBarNavigationController.self])
-                .standardAppearance
-            var color = needsToShowExtension
-                ? nil
-                : standardNavigationBarAppearance?.shadowColor
-            if let standardNavigationBarAppearance = standardNavigationBarAppearance {
-                navigationBar.standardAppearance = UINavigationBarAppearance(
-                    barAppearance: standardNavigationBarAppearance
-                )
-                navigationBar.standardAppearance.shadowColor = color
-            }
-            color = needsToShowExtension
-                ? nil
-                : scrollEdgeNavigationBarAppearance?.shadowColor
-            navigationBar.scrollEdgeAppearance = scrollEdgeNavigationBarAppearance.map {
-                UINavigationBarAppearance(barAppearance: $0)
-            }
-            navigationBar.scrollEdgeAppearance?.shadowColor = color
-            color = needsToShowExtension
-                ? nil
-                : compactNavigationBarAppearance?.shadowColor
-            navigationBar.compactAppearance = compactNavigationBarAppearance.map {
-                UINavigationBarAppearance(barAppearance: $0)
-            }
-            navigationBar.compactAppearance?.shadowColor = color
-        } else {
-            navigationBar.shadowImage = needsToShowExtension ? UIImage() : nil
+        let compactNavigationBarAppearance = UINavigationBar
+            .appearance(whenContainedInInstancesOf: [ExtensibleNavigationBarNavigationController.self])
+            .compactAppearance
+        let scrollEdgeNavigationBarAppearance = UINavigationBar
+            .appearance(whenContainedInInstancesOf: [ExtensibleNavigationBarNavigationController.self])
+            .scrollEdgeAppearance
+        let standardNavigationBarAppearance: UINavigationBarAppearance? = UINavigationBar
+            .appearance(whenContainedInInstancesOf: [ExtensibleNavigationBarNavigationController.self])
+            .standardAppearance
+        var color = needsToShowExtension
+        ? nil
+        : standardNavigationBarAppearance?.shadowColor
+        if let standardNavigationBarAppearance {
+            navigationBar.standardAppearance = UINavigationBarAppearance(
+                barAppearance: standardNavigationBarAppearance
+            )
+            navigationBar.standardAppearance.shadowColor = color
         }
+        color = needsToShowExtension
+        ? nil
+        : scrollEdgeNavigationBarAppearance?.shadowColor
+        navigationBar.scrollEdgeAppearance = scrollEdgeNavigationBarAppearance.map {
+            UINavigationBarAppearance(barAppearance: $0)
+        }
+        navigationBar.scrollEdgeAppearance?.shadowColor = color
+        color = needsToShowExtension
+        ? nil
+        : compactNavigationBarAppearance?.shadowColor
+        navigationBar.compactAppearance = compactNavigationBarAppearance.map {
+            UINavigationBarAppearance(barAppearance: $0)
+        }
+        navigationBar.compactAppearance?.shadowColor = color
     }
 
     private func resetExtensionContainerBottomConstraint() {

@@ -5,7 +5,7 @@ lane :tests do
     configuration: "Debug",
     scheme: "NavigationBarExtension-Example",
     clean: true,
-    devices: ["iPhone 8"]
+    devices: ["iPhone SE (3rd generation)"]
   )
 end
 

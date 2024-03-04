@@ -86,14 +86,6 @@ let navigationController = ExtensibleNavigationBarNavigationController()
 navigationController.navigationControllerDelegate = self
 ```
 
-There is an issue with iOS 12 where the `isTranslucent` property cannot be retrieved from the
-`UINavigationBar.appearance()` method.
-So if you need to set your UINavigationBar translucent, you can use this:
-
-```swift
-ExtensibleNavigationBarNavigationController.ad_isTranslucent = true
-```
-
 ## Credits
 
 ADNavigationBarExtension is owned and maintained by [Fabernovel](https://fabernovel.com/). You can follow us on Twitter at [@FabernovelApp](https://twitter.com/fabernovelapp).
