@@ -1,6 +1,9 @@
 ### Fix
 - Fix safe area when setting the child VCs directly
 
+### Removes
+- Drop support of iOS 11, 12 and 13
+
 ## [1.0.4]
 
 ### Fix

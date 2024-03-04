@@ -1,6 +1,6 @@
 use_frameworks!
 
-platform :ios, '11.0'
+platform :ios, '14.0'
 
 target 'NavigationBarExtension_Example' do
   pod 'ADNavigationBarExtension', :path => './'
