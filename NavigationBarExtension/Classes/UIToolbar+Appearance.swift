@@ -16,7 +16,6 @@ extension UIToolbar {
         barTintColor = UINavigationBar
             .appearance(whenContainedInInstancesOf: [ExtensibleNavigationBarNavigationController.self])
             .barTintColor
-        isTranslucent = ExtensibleNavigationBarNavigationController.ad_isTranslucent
         let compactNavigationBarAppearance = UINavigationBar
             .appearance(whenContainedInInstancesOf: [ExtensibleNavigationBarNavigationController.self])
             .compactAppearance
