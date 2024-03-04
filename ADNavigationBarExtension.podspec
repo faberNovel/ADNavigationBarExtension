@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ADNavigationBarExtension'
-  s.version          = '1.0.4'
+  s.version          = '2.0.0'
   s.author           = 'Fabernovel Technologies'
   s.homepage         = 'https://fabernovel.com/'
   s.summary          = 'ADNavigationBarExtension is a UI library written in Swift to show and hide an extension to your UINavigationBar'
