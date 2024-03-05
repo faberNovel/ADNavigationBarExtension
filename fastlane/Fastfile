@@ -101,9 +101,12 @@ def bump_podspec(target_version)
     version_number: target_version
   )
 
-  git_add(path: podspec_path)
+  pod_install # update the Podfile.lock with the new version
+
+  path = [podspec_path, "Podfile.lock"]
+  git_add(path: path)
   git_commit(
-    path: podspec_path,
+    path: path,
     message: "Bump to #{target_version}"
   )
 end
