@@ -20,6 +20,6 @@ jobs:
 
     - name: Publish release
       env:
-        GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN_CI }}
         COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TOKEN_CI }}
       run: bundle exec fastlane publish_release
