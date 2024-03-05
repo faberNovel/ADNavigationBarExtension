@@ -1,3 +1,7 @@
+## [Unreleased]
+
+## [2.0.0] - 2024-03-04
+
 ### Changed
 - Bump ADUtils requirements to 12+
 
