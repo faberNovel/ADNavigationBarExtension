@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // swiftlint:disable:previous discouraged_optional_collection
         setUpAppearance()
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
@@ -38,20 +39,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar
             .appearance(whenContainedInInstancesOf: [ExtensibleNavigationBarNavigationController.self])
             .tintColor = UIColor.purple
-        if #available(iOS 13, *) {
-            let appearance = UINavigationBarAppearance()
-            appearance.configureWithDefaultBackground()
-            UINavigationBar
-                .appearance(whenContainedInInstancesOf: [ExtensibleNavigationBarNavigationController.self])
-                .standardAppearance = appearance
-            UINavigationBar
-                .appearance(whenContainedInInstancesOf: [ExtensibleNavigationBarNavigationController.self])
-                .compactAppearance = appearance
-            UINavigationBar
-                .appearance(whenContainedInInstancesOf: [ExtensibleNavigationBarNavigationController.self])
-                .scrollEdgeAppearance = appearance
-        } else {
-            ExtensibleNavigationBarNavigationController.ad_isTranslucent = false
-        }
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithDefaultBackground()
+        UINavigationBar
+            .appearance(whenContainedInInstancesOf: [ExtensibleNavigationBarNavigationController.self])
+            .standardAppearance = appearance
+        UINavigationBar
+            .appearance(whenContainedInInstancesOf: [ExtensibleNavigationBarNavigationController.self])
+            .compactAppearance = appearance
+        UINavigationBar
+            .appearance(whenContainedInInstancesOf: [ExtensibleNavigationBarNavigationController.self])
+            .scrollEdgeAppearance = appearance
     }
 }

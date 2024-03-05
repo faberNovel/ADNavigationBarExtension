@@ -1,3 +1,17 @@
+## [Unreleased]
+
+## [2.0.0] - 2024-03-04
+
+### Changed
+- Bump ADUtils requirements to 12+
+
+### Fix
+- Fix safe area when setting the child VCs directly
+
+### Removed
+- Drop support of iOS 11, 12 and 13
+- Remove workaround property `ad_isTranslucent`, use `UINavigationBar.appearance().isTranslucent` instead.
+
 ## [1.0.4]
 
 ### Fix
