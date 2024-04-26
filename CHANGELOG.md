@@ -1,5 +1,10 @@
 ## [Unreleased]
 
+## [2.1.0] - 2024-04-26
+
+### Added
+- Add support for Swift Package Manager
+
 ## [2.0.0] - 2024-03-04
 
 ### Changed

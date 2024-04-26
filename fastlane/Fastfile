@@ -114,3 +114,7 @@ end
 def target_version_from_branch
   git_branch.gsub(/release\/[A-Za-z]*/, "")
 end
+
+def pod_install
+  sh "bundle exec pod install"
+end
