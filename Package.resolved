@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "adutils",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:faberNovel/ADUtils.git",
+      "state" : {
+        "revision" : "791ccbdb9dccff3ada11c0711f3cbcd57919292e",
+        "version" : "12.1.1"
+      }
+    }
+  ],
+  "version" : 2
+}
